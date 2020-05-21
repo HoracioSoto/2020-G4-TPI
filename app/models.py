@@ -1,38 +1,98 @@
 from django.db import models
+from django.core.validators import MaxValueValidator
 
-# Create your models here.
-class Paciente(models.Model):
-    _ESTADOS = [
-        ('E', 'Enfermo'),
-        ('N', 'Negativo'),
-        ('C', 'Curado'),
-        ('F', 'Fallecido'),
-        ('EE', 'En espera'),
-        ('A', 'Aislado'),
-    ]
+from . import utils
 
-    _GENEROS = [
-        ('M', 'Masculino'),
-        ('F', 'Femenino'),
-    ]
 
-    nombre = models.CharField(blank=True, null=True, max_length=50)
+class Provincia(models.Model):
+    nombre = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nombre
+
+    def __unicode__(self):
+        return self.nombre
+
+
+class Hospital(models.Model):
+    nombre = models.CharField(max_length=100)
+    direccion = models.CharField(max_length=150)
+    localidad = models.CharField(max_length=100)
+    provincia = models.ForeignKey(
+        to='Provincia',
+        related_name='hospitales',
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        verbose_name_plural = 'hospitales'
+
+    def __str__(self):
+        return self.nombre
+
+    def __unicode__(self):
+        return self.nombre
+
+
+class Persona(models.Model):
+    nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
+    dni = models.IntegerField(unique=True, help_text='Solo números')
     genero = models.CharField(
         max_length=1,
-        choices=_GENEROS,
+        choices=utils.generos,
         default='M',
     )
     fecha_nacimiento = models.DateField()
+
+    class Meta:
+        abstract = True
+
+    def __str__(self):
+        return '{} {}'.format(self.nombre, self.apellido)
+
+
+# Create your models here.
+class Paciente(Persona):
     estado = models.CharField(
         max_length=2,
-        choices=_ESTADOS,
+        choices=utils.estados,
         default='N',
         help_text='Estado en que se encuentra el paciente'
     )
-    asintomatico = models.BooleanField(default=False)
-    fecha_alta = models.DateTimeField(auto_now_add=True)
+    condicion = models.CharField(
+        max_length=2,
+        choices=utils.condiciones,
+        default='A',
+        help_text='Sintomático o asintomático',
+    )
+    patologias = models.TextField(blank=True, null=True)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_alta = models.DateTimeField(blank=True, null=True)
+    fecha_defuncion = models.DateTimeField(blank=True, null=True)
+    medico = models.ForeignKey(
+        to='Medico',
+        related_name='pacientes',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
+    hospital = models.ForeignKey(
+        to='Hospital',
+        related_name='pacientes',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
 
-    def __str__(self):
-        return '{} {}'.format(self.nombre, self.apellido) 
-    
+
+class Medico(Persona):
+    matricula = models.CharField(unique=True, max_length=30)
+    max_pacientes = models.IntegerField(validators=[MaxValueValidator(100)])
+    hospital = models.ForeignKey(
+        to='Hospital',
+        related_name='medicos',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )

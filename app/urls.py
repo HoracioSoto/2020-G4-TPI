@@ -9,7 +9,7 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-from .views import PacienteViewSet
+from .views import HospitalViewSet, PacienteViewSet, MedicoViewSet
 
 # coreapi docs
 schema_view = get_schema_view(
@@ -38,7 +38,9 @@ if settings.DEBUG:
 else:
     router = DefaultRouter()
 
+router.register('hospital', HospitalViewSet, basename='hospital')
 router.register('paciente', PacienteViewSet, basename='paciente')
+router.register('medico', MedicoViewSet, basename='medico')
 
 urlpatterns = [
     path(r'', include((router.urls, 'api'), namespace='api')),

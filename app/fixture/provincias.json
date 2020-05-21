@@ -1,0 +1,117 @@
+[
+    {
+        "model": "app.provincia",
+        "pk": 1,
+        "fields": {"nombre": "Buenos Aires"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 2,
+        "fields": {"nombre": "Catamarca"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 3,
+        "fields": {"nombre": "Chaco"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 4,
+        "fields": {"nombre": "Chubut"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 5,
+        "fields": {"nombre": "Córdoba"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 6,
+        "fields": {"nombre": "Corrientes"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 7,
+        "fields": {"nombre": "Entre Ríos"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 8,
+        "fields": {"nombre": "Formosa"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 9,
+        "fields": {"nombre": "Jujuy"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 10,
+        "fields": {"nombre": "La Pampa"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 11,
+        "fields": {"nombre": "La Rioja"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 12,
+        "fields": {"nombre": "Mendoza"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 13,
+        "fields": {"nombre": "Misiones"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 14,
+        "fields": {"nombre": "Neuquén"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 15,
+        "fields": {"nombre": "Río Negro"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 16,
+        "fields": {"nombre": "Salta"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 17,
+        "fields": {"nombre": "San Juan"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 18,
+        "fields": {"nombre": "San Luis"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 19,
+        "fields": {"nombre": "Santa Cruz"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 20,
+        "fields": {"nombre": "Santa Fe"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 21,
+        "fields": {"nombre": "Santiago del Estero"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 22,
+        "fields": {"nombre": "Tierra del Fuego"}
+    },
+    {
+        "model": "app.provincia",
+        "pk": 23,
+        "fields": {"nombre": "Tucumán"}
+    }
+]

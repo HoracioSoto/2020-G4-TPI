@@ -1,11 +1,17 @@
-import requests
+generos = [
+    ('M', 'Masculino'),
+    ('F', 'Femenino'),
+]
 
-from .models import Paciente
+estados = [
+    ('A', 'Aislado'),
+    ('C', 'Curado'),
+    ('E', 'Enfermo'),
+    ('EE', 'En espera'),
+    ('F', 'Fallecido'),
+]
 
-def prueba():
-    asintomaticos = Paciente.objects.filter(nombre__in=['Cesar', 'Tato'])
-    print(asintomaticos)
-    response = requests.get('http://127.0.0.1:8000/api/paciente/')
-    print(response)
-
-prueba()
+condiciones = [
+    ('A', 'Asintomático'),
+    ('S', 'Sintomático'),
+]

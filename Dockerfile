@@ -7,9 +7,9 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# instalación de dependencias de psycopg2 (conector Python-Postgres)
+# instalación de dependencias de psycopg2 (conector Python-Postgres) y bash
 RUN apk update \
-    && apk add postgresql-dev gcc python3-dev musl-dev
+    && apk add postgresql-dev gcc python3-dev musl-dev bash
 
 # instalación de dependencias
 RUN pip install -U pip

@@ -4,12 +4,19 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from .models import Paciente
-from .serializers import PacienteSerializer
+from .models import Hospital, Paciente, Medico
+from .serializers import HospitalSerializer, PacienteSerializer
+from .serializers import MedicoSerializer
 
 import requests
 
 # Create your views here.
+class HospitalViewSet(viewsets.ModelViewSet):
+
+    queryset = Hospital.objects.all()
+    serializer_class = HospitalSerializer
+
+
 class PacienteViewSet(viewsets.ModelViewSet):
 
     queryset = Paciente.objects.all()
@@ -18,14 +25,13 @@ class PacienteViewSet(viewsets.ModelViewSet):
     @action(methods=('get', ), detail=False)
     def asintomaticos(self, *args, **kwargs):
         try:
-            asintomaticos = self.queryset.filter(asintomatico=True)
+            asintomaticos = self.queryset.filter(condicion='A')
             resp = []
             for paciente in asintomaticos:
                 data = {
                     'id': paciente.id,
                     'nombre': paciente.nombre,
                     'apellido': paciente.apellido,
-                    'fecha_alta': paciente.fecha_alta.strftime('%d-%m-%Y'),
                 }
                 resp.append(data)
             return Response({
@@ -36,3 +42,9 @@ class PacienteViewSet(viewsets.ModelViewSet):
             return JsonResponse(
                 data={'code': 500, 'message': str(e)}, status=500
             )
+
+
+class MedicoViewSet(viewsets.ModelViewSet):
+
+    queryset = Medico.objects.all()
+    serializer_class = MedicoSerializer
