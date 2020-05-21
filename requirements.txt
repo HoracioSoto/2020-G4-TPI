@@ -1,0 +1,7 @@
+Django==3.0
+djangorestframework
+coreapi
+Markdown
+drf-yasg
+ipython
+psycopg2
