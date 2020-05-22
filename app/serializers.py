@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
-from .models import Hospital, Paciente, Medico
+from .models import Hospital, Paciente, Medico, Recurso
 
 
 class HospitalSerializer(serializers.ModelSerializer):
@@ -22,4 +22,10 @@ class MedicoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Medico
+        fields = '__all__'
+
+class RecursoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Recurso
         fields = '__all__'

@@ -4,9 +4,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from .models import Hospital, Paciente, Medico
-from .serializers import HospitalSerializer, PacienteSerializer
-from .serializers import MedicoSerializer
+from .models import Hospital, Paciente, Medico, Recurso
+from .serializers import HospitalSerializer, PacienteSerializer, MedicoSerializer, RecursoSerializer
 
 import requests
 
@@ -48,3 +47,8 @@ class MedicoViewSet(viewsets.ModelViewSet):
 
     queryset = Medico.objects.all()
     serializer_class = MedicoSerializer
+
+
+class RecursoViewSet(viewsets.ModelViewSet):
+    queryset = Recurso.objects.all()
+    serializer_class = RecursoSerializer

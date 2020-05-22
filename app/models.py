@@ -34,6 +34,16 @@ class Hospital(models.Model):
         return self.nombre
 
 
+class Recurso(models.Model):
+    nombre = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=300, blank=True, null=True)
+    estado = models.BooleanField(default=False, help_text='Si hay disponibilidad o no del recurso')
+    cantidad = models.IntegerField(default=0,help_text='Stock disponible del recurso')
+
+    def __str__(self):
+        return self.nombre
+
+
 class Persona(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)

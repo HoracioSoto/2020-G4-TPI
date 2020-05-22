@@ -50,3 +50,8 @@ class PacienteAdmin(admin.ModelAdmin):
                     'estado', 'fecha_alta')
     search_fields = ('id', 'nombre', 'apellido')
     list_filter = (EstadoFilter, GeneroFilter)
+
+@admin.register(models.Recurso)
+class RecursoAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nombre', 'descripcion', 'estado', 'cantidad')
+    search_fields = ('id', 'nombre', 'estado')
