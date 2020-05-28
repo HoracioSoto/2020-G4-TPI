@@ -1,0 +1,42 @@
+[
+    {
+        "model":"app.recurso",
+        "pk":1,
+        "fields":{"nombre":"Barbijos quirurgicos","descripcion":"-","estado":"True","cantidad":1200}
+    },
+    {
+        "model":"app.recurso",
+        "pk":2,
+        "fields":{"nombre":"Guantes","descripcion":"-","estado":"True","cantidad":2000}
+    },
+    {
+        "model":"app.recurso",
+        "pk":3,
+        "fields":{"nombre":"Alcohol en gel","descripcion":"-","estado":"True","cantidad":5400}
+    },
+    {
+        "model":"app.recurso",
+        "pk":4,
+        "fields":{"nombre":"Alcohol en aerosol","descripcion":"-","estado":"True","cantidad":4000}
+    },
+    {
+        "model":"app.recurso",
+        "pk":5,
+        "fields":{"nombre":"Jeringas","descripcion":"-","estado":"True","cantidad":7100}
+    },
+    {
+        "model":"app.recurso",
+        "pk":6,
+        "fields":{"nombre":"Jabón","descripcion":"-","estado":"True","cantidad":6800}
+    },
+    {
+        "model":"app.recurso",
+        "pk":7,
+        "fields":{"nombre":"Medicina","descripcion":"Ibuprofeno","estado":"True","cantidad":9800}
+    },
+    {
+        "model":"app.recurso",
+        "pk":8,
+        "fields":{"nombre":"Bata quirurgica","descripcion":"-","estado":"True","cantidad":5900}
+    }
+]

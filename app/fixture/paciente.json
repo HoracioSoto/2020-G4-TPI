@@ -1,0 +1,107 @@
+[
+    {
+        "model": "app.paciente",
+        "pk": 1,
+        "fields": {
+            "nombre": "Malena",
+            "apellido": "Bosch",
+            "dni": 4349371,
+            "fecha_nacimiento": "1998-4-17",
+            "estado": "A",
+            "condicion": "S",
+            "patologias": "tos, fiebre",
+            "medico": 1,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 2,
+        "fields": {
+            "nombre": "Elena",
+            "apellido": "Bosch",
+            "dni": 4350341,
+            "fecha_nacimiento": "1998-6-21",
+            "estado": "A",
+            "condicion": "S",
+            "patologias": "fiebre",
+            "medico": 1,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 3,
+        "fields": {
+            "nombre": "Rafael",
+            "apellido": "Benitez",
+            "dni": 21046847,
+            "fecha_nacimiento": "1964-8-12",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos, fiebre, dolor muscular, dificultad para respirar",
+            "medico": 2,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 4,
+        "fields": {
+            "nombre": "Miriam",
+            "apellido": "Brener",
+            "dni": 44424796,
+            "fecha_nacimiento": "2002-6-24",
+            "estado": "EE",
+            "condicion": "A",
+            "patologias": "tos",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 5,
+        "fields": {
+            "nombre": "Tobias",
+            "apellido": "Roch",
+            "dni": 34547684,
+            "fecha_nacimiento": "1992-7-14",
+            "estado": "A",
+            "condicion": "A",
+            "patologias": "-",
+            "medico": 4,
+            "hospital": 2
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 6,
+        "fields": {
+            "nombre": "Marcos",
+            "apellido": "Videla",
+            "dni": 42146789,
+            "fecha_nacimiento": "1996-7-14",
+            "estado": "C",
+            "condicion": "S",
+            "patologias": "vomitos, tos, fiebre",
+            "medico": 8,
+            "hospital": 5
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 7,
+        "fields": {
+            "nombre": "Lautaro",
+            "apellido": "Perez",
+            "dni": 28674382,
+            "fecha_nacimiento": "1962-6-2",
+            "estado": "F",
+            "condicion": "S",
+            "patologias": "fiebre",
+            "medico": 9,
+            "hospital": 6
+        }
+    }
+]

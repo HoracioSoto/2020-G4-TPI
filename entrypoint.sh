@@ -13,6 +13,10 @@ fi
 
 python manage.py flush --no-input
 python manage.py migrate
-python manage.py loaddata app/fixture/provincias.json
+python manage.py loaddata app/fixture/provincia.json
+python manage.py loaddata app/fixture/hospital.json
+python manage.py loaddata app/fixture/medico.json
+python manage.py loaddata app/fixture/paciente.json
+python manage.py loaddata app/fixture/recurso.json
 
 exec "$@"

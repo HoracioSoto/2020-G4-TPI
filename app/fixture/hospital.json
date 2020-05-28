@@ -1,0 +1,92 @@
+[
+    {
+        "model": "app.hospital",
+        "pk": 1,
+        "fields": {
+            "nombre": "Juan Pablo Segundo",
+            "direccion": "Av. Artigas 1435",
+            "localidad": "Corrientes",
+            "provincia": 6
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 2,
+        "fields": {
+            "nombre": "Perrando",
+            "direccion": "Av. 9 de Julio 1101",
+            "localidad": "Resistencia",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 3,
+        "fields": {
+            "nombre": "Interzonal",
+            "direccion": "JUan B Justo 6898",
+            "localidad": "Mar del PLata",
+            "provincia": 1
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 4,
+        "fields": {
+            "nombre": "Hospital Escuela",
+            "direccion": "Av. 3 de Abril 1224",
+            "localidad": "Corrientes",
+            "provincia": 6
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 5,
+        "fields": {
+            "nombre": "Dr. Ricardo Gutierrez",
+            "direccion": "-",
+            "localidad": "La Plata",
+            "provincia": 1
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 6,
+        "fields": {
+            "nombre": "Hospital Rawson",
+            "direccion": "Bajada Pucara 2025",
+            "localidad": "Cordoba",
+            "provincia": 5
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 7,
+        "fields": {
+            "nombre": "Hospital Cordoba",
+            "direccion": "Libertad 2051",
+            "localidad": "Cordoba",
+            "provincia": 5
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 8,
+        "fields": {
+            "nombre": "Hospital San Bernardo",
+            "direccion": "Av. Jose Tobias 69",
+            "localidad": "Salta",
+            "provincia": 16
+        }
+    },
+    {
+        "model": "app.hospital",
+        "pk": 9,
+        "fields": {
+            "nombre": "Hospital San Martin",
+            "direccion": "-",
+            "localidad": "Paraná",
+            "provincia": 7
+        }
+    }
+]

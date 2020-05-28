@@ -37,8 +37,10 @@ class Hospital(models.Model):
 class Recurso(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=300, blank=True, null=True)
-    estado = models.BooleanField(default=False, help_text='Si hay disponibilidad o no del recurso')
-    cantidad = models.IntegerField(default=0,help_text='Stock disponible del recurso')
+    estado = models.BooleanField(
+        default=False, help_text='Si hay disponibilidad o no del recurso')
+    cantidad = models.IntegerField(
+        default=0, help_text='Stock disponible del recurso')
 
     def __str__(self):
         return self.nombre
@@ -77,7 +79,8 @@ class Paciente(Persona):
         help_text='Sintomático o asintomático',
     )
     patologias = models.TextField(blank=True, null=True)
-    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_creacion = models.DateTimeField(
+        blank=True, null=True, auto_now_add=True)
     fecha_alta = models.DateTimeField(blank=True, null=True)
     fecha_defuncion = models.DateTimeField(blank=True, null=True)
     medico = models.ForeignKey(

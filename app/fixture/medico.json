@@ -1,0 +1,171 @@
+[
+    {
+        "model": "app.medico",
+        "pk": 1,
+        "fields": {
+            "nombre": "Jorge",
+            "apellido": "Ramirez",
+            "dni": 48657346,
+            "fecha_nacimiento": "1998-8-21",
+            "matricula": "10159",
+            "max_pacientes": 20,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 2,
+        "fields": {
+            "nombre": "Mario",
+            "apellido": "Gomez",
+            "dni": 34568198,
+            "fecha_nacimiento": "1986-3-15",
+            "matricula": "11248",
+            "max_pacientes": 35,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 3,
+        "fields": {
+            "nombre": "Luis",
+            "apellido": "Martinez",
+            "dni": 29462782,
+            "fecha_nacimiento": "1975-1-21",
+            "matricula": "9846",
+            "max_pacientes": 40,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 4,
+        "fields": {
+            "nombre": "Martin",
+            "apellido": "Gutierrez",
+            "dni": 31452782,
+            "fecha_nacimiento": "1978-2-11",
+            "matricula": "9243",
+            "max_pacientes": 32,
+            "hospital": 2
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 5,
+        "fields": {
+            "nombre": "Miguel",
+            "apellido": "Fernandez",
+            "dni": 35487249,
+            "fecha_nacimiento": "1980-3-13",
+            "matricula": "10846",
+            "max_pacientes": 20,
+            "hospital": 2
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 6,
+        "fields": {
+            "nombre": "Juan",
+            "apellido": "Zacarias",
+            "dni": 33486154,
+            "fecha_nacimiento": "1982-6-18",
+            "matricula": "10246",
+            "max_pacientes": 15,
+            "hospital": 3
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 6,
+        "fields": {
+            "nombre": "Andrea",
+            "apellido": "Miño",
+            "dni": 36424004,
+            "fecha_nacimiento": "1985-8-10",
+            "matricula": "12684",
+            "max_pacientes": 19,
+            "hospital": 3
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 7,
+        "fields": {
+            "nombre": "Josefina",
+            "apellido": "Morales",
+            "dni": 38452169,
+            "fecha_nacimiento": "1992-11-16",
+            "matricula": "12963",
+            "max_pacientes": 11,
+            "hospital": 4
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 8,
+        "fields": {
+            "nombre": "Juana",
+            "apellido": "Canteros",
+            "dni": 32158432,
+            "fecha_nacimiento": "1977-4-20",
+            "matricula": "13549",
+            "max_pacientes": 30,
+            "hospital": 5
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 9,
+        "fields": {
+            "nombre": "Marta",
+            "apellido": "Barrios",
+            "dni": 40187635,
+            "fecha_nacimiento": "1980-3-06",
+            "matricula": "14245",
+            "max_pacientes": 25,
+            "hospital": 6
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 10,
+        "fields": {
+            "nombre": "Brian",
+            "apellido": "Esteche",
+            "dni": 36486249,
+            "fecha_nacimiento": "1983-2-02",
+            "matricula": "15762",
+            "max_pacientes": 22,
+            "hospital": 7
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 11,
+        "fields": {
+            "nombre": "Fernando",
+            "apellido": "Lehmann",
+            "dni": 35412798,
+            "fecha_nacimiento": "1986-1-09",
+            "matricula": "16124",
+            "max_pacientes": 18,
+            "hospital": 7
+        }
+    },
+    {
+        "model": "app.medico",
+        "pk": 12,
+        "fields": {
+            "nombre": "Ines",
+            "apellido": "Olmedo",
+            "dni": 36154249,
+            "fecha_nacimiento": "1977-12-20",
+            "matricula": "15472",
+            "max_pacientes": 15,
+            "hospital": 8
+        }
+    }
+]
