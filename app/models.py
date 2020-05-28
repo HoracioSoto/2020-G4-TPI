@@ -19,7 +19,7 @@ class Hospital(models.Model):
     direccion = models.CharField(max_length=150)
     localidad = models.CharField(max_length=100)
     provincia = models.ForeignKey(
-        to='Provincia',
+        to=Provincia,
         related_name='hospitales',
         on_delete=models.CASCADE,
     )
@@ -64,6 +64,18 @@ class Persona(models.Model):
         return '{} {}'.format(self.nombre, self.apellido)
 
 
+class Medico(Persona):
+    matricula = models.CharField(unique=True, max_length=30)
+    max_pacientes = models.IntegerField(validators=[MaxValueValidator(100)])
+    hospital = models.ForeignKey(
+        to=Hospital,
+        related_name='medicos',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
+
+
 # Create your models here.
 class Paciente(Persona):
     estado = models.CharField(
@@ -84,7 +96,7 @@ class Paciente(Persona):
     fecha_alta = models.DateTimeField(blank=True, null=True)
     fecha_defuncion = models.DateTimeField(blank=True, null=True)
     medico = models.ForeignKey(
-        to='Medico',
+        to=Medico,
         related_name='pacientes',
         on_delete=models.SET_NULL,
         blank=True,
@@ -99,13 +111,37 @@ class Paciente(Persona):
     )
 
 
-class Medico(Persona):
-    matricula = models.CharField(unique=True, max_length=30)
-    max_pacientes = models.IntegerField(validators=[MaxValueValidator(100)])
+class Solicitud(models.Model):
+    motivo = models.CharField(max_length=100)
+    detalle = models.TextField(blank=True, null=True)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_respuesta = models.DateTimeField(blank=True, null=True)
+    estado = models.CharField(
+        max_length=1,
+        choices=utils.estados_solicitud,
+        default='P',
+    )
+    respuesta = models.TextField(blank=True, null=True)
+
+    class Meta:
+        abstract = True
+
+
+class SolicitudRecurso(Solicitud):
     hospital = models.ForeignKey(
         to='Hospital',
-        related_name='medicos',
-        on_delete=models.SET_NULL,
-        blank=True,
-        null=True,
+        related_name='solicitudes',
+        on_delete=models.CASCADE,
     )
+    recursos = models.ManyToManyField(
+        to=Recurso,
+        related_name='solicitudes',
+        through='SolicitudRecursoItem'
+    )
+
+
+class SolicitudRecursoItem(models.Model):
+    solicitudrecurso = models.ForeignKey(
+        SolicitudRecurso, on_delete=models.CASCADE)
+    recurso = models.ForeignKey(Recurso, on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=1, help_text='Cantidad solicitada')

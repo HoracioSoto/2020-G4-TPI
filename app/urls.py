@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.urls import path, include
+from django.urls import path, re_path, include
 
 from rest_framework.routers import DefaultRouter
 from rest_framework.routers import SimpleRouter
@@ -48,8 +48,8 @@ urlpatterns = [
     path(r'docs/', include_docs_urls(title='2020-G4-TPI API Docs',
                                      authentication_classes=[],
                                      permission_classes=[])),
-    path(r'swagger(?P<format>\.json|\.yaml)', schema_view.without_ui(
-         cache_timeout=0), name='schema-json'),
+    re_path(r'swagger(?P<format>\.json|\.yaml)', schema_view.without_ui(
+             cache_timeout=0), name='schema-json'),
     path(r'swagger/', schema_view.with_ui('swagger', cache_timeout=0),
          name='schema-swagger-ui'),
     path(r'redoc/', schema_view.with_ui('redoc', cache_timeout=0),

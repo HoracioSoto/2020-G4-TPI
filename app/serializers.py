@@ -53,3 +53,22 @@ class RecursoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recurso
         fields = '__all__'
+
+
+class SolicitudRecursoItemSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SolicitudRecursoItem
+        fields = ['recurso', 'cantidad']
+
+
+class SolicitudRecursoSerializer(serializers.ModelSerializer):
+    recursos = serializers.ListField(
+        write_only=True,
+        help_text='Array de recursos solicitados',
+        child=SolicitudRecursoItemSerializer()
+    )
+
+    class Meta:
+        model = SolicitudRecurso
+        fields = ['hospital', 'motivo', 'detalle', 'recursos']

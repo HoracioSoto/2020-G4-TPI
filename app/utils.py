@@ -15,3 +15,9 @@ condiciones = [
     ('A', 'Asintomático'),
     ('S', 'Sintomático'),
 ]
+
+estados_solicitud = [
+    ('A', 'Aprobada'),
+    ('P', 'Pendiente'),
+    ('R', 'Rechazada'),
+]
