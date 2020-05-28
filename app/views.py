@@ -4,10 +4,11 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from .models import Hospital, Paciente, Medico, Recurso
-from .serializers import HospitalSerializer, PacienteSerializer, MedicoSerializer, RecursoSerializer
+from .models import *
+from .serializers import *
 
 import requests
+
 
 # Create your views here.
 class HospitalViewSet(viewsets.ModelViewSet):
@@ -50,5 +51,6 @@ class MedicoViewSet(viewsets.ModelViewSet):
 
 
 class RecursoViewSet(viewsets.ModelViewSet):
+
     queryset = Recurso.objects.all()
     serializer_class = RecursoSerializer

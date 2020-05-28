@@ -27,7 +27,7 @@ _Tener instalado Docker y Docker Compose en la máquina donde se va a ejecutar_
 1. Clonar este repositorio
 
 ```
-git clone https://github.com/HoracioSoto/2020-G4-TPI.git 2020-g4-tpi
+git clone https://github.com/FRRe-DACS/2020-G4-TPI.git 2020-g4-tpi
 ```
 
 2. Ir a la carpeta del proyecto
