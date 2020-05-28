@@ -54,4 +54,5 @@ urlpatterns = [
          name='schema-swagger-ui'),
     path(r'redoc/', schema_view.with_ui('redoc', cache_timeout=0),
          name='schema-redoc'),
+    re_path('^paciente/estado/(?P<estado>.+)/$', PacienteList.as_view()),
 ]
