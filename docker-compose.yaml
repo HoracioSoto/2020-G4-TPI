@@ -16,6 +16,8 @@ services:
         image: postgres:12.3-alpine
         volumes:
             - ./postgres_data:/var/lib/postgresql/data/
+        ports:
+            - 5432:5432
         environment:
             - POSTGRES_USER=django_app
             - POSTGRES_PASSWORD=django_app
