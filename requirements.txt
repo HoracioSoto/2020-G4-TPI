@@ -5,3 +5,4 @@ Markdown
 drf-yasg
 ipython
 psycopg2
+django-cors-headers

@@ -1,0 +1,14 @@
+.icon-edit{
+    background-image: url('/assets/icons/edit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 10px;
+}
+.icon-delete{
+    background-image: url('/assets/icons/delete.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 10px;
+}

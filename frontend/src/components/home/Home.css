@@ -1,0 +1,43 @@
+.title-covid{
+    font-weight: 400;
+}
+.bg-portada{
+    background-image: url('../../assets/img/Coronavirus.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+.text-shadow{
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+.bg-informacion{
+    
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.bg-tarjeta{
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 150px;
+    height: 150px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .6);
+}
+.img-sintoma{
+    max-height: 100px;
+    width: auto;
+}
+.btn-reporte{
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .6);
+}
+.icon-report{
+    background-image: url('../../assets/icons/report.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px;
+}
