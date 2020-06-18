@@ -38,7 +38,7 @@ if settings.DEBUG:
 else:
     router = DefaultRouter()
 
-router.register('porvincia', ProvinciaViewSet, basename='provincia')
+router.register('provincia', ProvinciaViewSet, basename='provincia')
 router.register('hospital', HospitalViewSet, basename='hospital')
 router.register('paciente', PacienteViewSet, basename='paciente')
 router.register('medico', MedicoViewSet, basename='medico')

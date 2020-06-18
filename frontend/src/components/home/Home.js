@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './Home.css'
 import '../../assets/img/Coronavirus.jpg'
 import { Cuidados } from './Cuidados'
@@ -15,9 +16,9 @@ export default class Home extends Component {
                             </h1>
                         </div>
                         <div className="col-10 mx-auto align-self-end">
-                            <button className="btn btn-lg btn-info text-uppercase btn-reporte">
+                            <Link className="btn btn-lg btn-info text-uppercase btn-reporte" to="/reporte">
                                 <i className="icon-report"></i>&nbsp;Reporte Diario
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
