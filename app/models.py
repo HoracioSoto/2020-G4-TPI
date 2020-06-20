@@ -50,6 +50,8 @@ class Persona(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     dni = models.IntegerField(unique=True, help_text='Solo números')
+    direccion = models.CharField(max_length=200, null=True, blank=True, help_text='Direccion donde reside del Paciente')
+    localidad = models.CharField(max_length=200, null=True, blank=True, default='Resistencia', help_text='Localidad donde reside del Paciente')
     genero = models.CharField(
         max_length=1,
         choices=utils.generos,
