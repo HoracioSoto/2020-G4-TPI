@@ -1,64 +1,23 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {Doughnut,Line} from 'react-chartjs-2';
+import localidadesArgentina from '../../assets/json/localidades.json'
+import ReporteDptos from './ReporteDptos';
+import ReportePacienteEstados from './ReportePacienteEstados';
+import ReporteMensual from './ReporteMensual';
+import ReporteCiudades from './ReporteCiudades'
 import './Reporte.css'
 
 
 
 export class Reporte extends Component {
     state = {
+        ciudades: [],
         pacientes: [],
         pacientesHoy: [],
         pacientesProvincias: [],
         hospitales: [],
         provincias: [],
         fecha: '',
-        datos: {
-            labels: [
-                'Asintomáticos',
-                'Sintomáticos',
-                'Fallecidos'
-            ],
-            datasets: [{
-                data: [300, 50, 25],
-                backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-                ],
-                hoverBackgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-                ]
-            }]
-        },
-        datosline: {
-            labels: ['Mar', 'Abr', 'May', 'Jun', 'Jul','Ago','Sep','Oct','Nov'],
-            datasets: [
-              {
-                label: 'Contagios por mes',
-                fill: false,
-                lineTension: 0.1,
-                backgroundColor: 'rgba(75,192,192,0.4)',
-                borderColor: 'rgba(75,192,192,1)',
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: 'rgba(75,192,192,1)',
-                pointBackgroundColor: '#fff',
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-                pointHoverBorderColor: 'rgba(220,220,220,1)',
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: [20, 59, 280, 481, 1200]
-              }
-            ]
-          },
     }
     
 
@@ -68,10 +27,10 @@ export class Reporte extends Component {
         await this.getPacientes()
         this.getFechaActual()
         this.getPacientesForDay('')
-        console.log(this.state.pacientes)
-        console.log(this.state.hospitales)
-        console.log(this.state.provincias)
-        console.log(this.state.fecha)
+        // console.log(this.state.pacientes)
+        // console.log(this.state.hospitales)
+        // console.log(this.state.provincias)
+        // console.log(this.state.fecha)
     }
 
     getPacientes = async () => {
@@ -152,23 +111,24 @@ export class Reporte extends Component {
                                     </span>
                                 </p>
                             </li>
-                            <li>
-                                <p>Contagios por Provincias:</p>
-                            </li>
-                                <ul>
-                                    <li></li>
-                                </ul>
                         </ul>
                     </div>
                 </div>
-                <div className="row">
+                <hr/>
+                <div className="row mt-5">
                     <div className="col-md-6">
-                        <h6>Estadistica de Pacientes Por Estado Actual:</h6>
-                        <Doughnut data={this.state.datos} />
+                        <ReportePacienteEstados />
                     </div>
                     <div className="col-md-6">
-                        <h6>Curva de contagios mensual:</h6>
-                        <Line data={this.state.datosline} />
+                        <ReporteMensual/>
+                    </div>
+                </div>
+                <div className="row mt-5">
+                    <div className="col-md-6">
+                        <ReporteDptos />
+                    </div>
+                    <div className="col-md-6">
+                        <ReporteCiudades/>
                     </div>
                 </div>
             </div>
