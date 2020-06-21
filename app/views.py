@@ -20,6 +20,10 @@ class HospitalViewSet(viewsets.ModelViewSet):
     queryset = Hospital.objects.all()
     serializer_class = HospitalSerializer
 
+class ProvinciaViewSet(viewsets.ModelViewSet):
+
+    queryset = Provincia.objects.all()
+    serializer_class = ProvinciaSerializer
 
 class PacienteViewSet(viewsets.ModelViewSet):
 

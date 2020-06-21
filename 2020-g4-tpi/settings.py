@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'app',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -73,6 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = '2020-g4-tpi.wsgi.application'
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
