@@ -92,11 +92,20 @@ class Paciente(Persona):
         default='A',
         help_text='Sintomático o asintomático',
     )
-    patologias = models.TextField(blank=True, null=True)
+    patologias = models.TextField(
+        blank=True, 
+        null=True)
     fecha_creacion = models.DateTimeField(
-        blank=True, null=True, auto_now_add=True)
-    fecha_alta = models.DateTimeField(blank=True, null=True)
-    fecha_defuncion = models.DateTimeField(blank=True, null=True)
+        blank=True, 
+        null=True, 
+        auto_now_add=True, 
+        help_text='Fecha de confirmación del caso como COVID-19 positivo')
+    fecha_alta = models.DateTimeField(
+        blank=True, 
+        null=True)
+    fecha_defuncion = models.DateTimeField(
+        blank=True, 
+        null=True)
     medico = models.ForeignKey(
         to=Medico,
         related_name='pacientes',

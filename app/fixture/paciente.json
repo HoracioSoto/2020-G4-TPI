@@ -12,6 +12,7 @@
             "estado": "A",
             "condicion": "S",
             "patologias": "tos, fiebre",
+            "fecha_creacion": "2020-3-15",
             "medico": 1,
             "hospital": 1
         }
@@ -29,6 +30,7 @@
             "estado": "A",
             "condicion": "S",
             "patologias": "fiebre",
+            "fecha_creacion": "2020-3-15",
             "medico": 1,
             "hospital": 1
         }
@@ -46,6 +48,7 @@
             "estado": "E",
             "condicion": "S",
             "patologias": "tos, fiebre, dolor muscular, dificultad para respirar",
+            "fecha_creacion": "2020-3-19",
             "medico": 2,
             "hospital": 1
         }
@@ -63,6 +66,7 @@
             "estado": "EE",
             "condicion": "A",
             "patologias": "tos",
+            "fecha_creacion": "2020-3-19",
             "medico": 3,
             "hospital": 1
         }
@@ -80,6 +84,7 @@
             "estado": "A",
             "condicion": "A",
             "patologias": "-",
+            "fecha_creacion": "2020-3-22",
             "medico": 4,
             "hospital": 2
         }
@@ -97,6 +102,7 @@
             "estado": "C",
             "condicion": "S",
             "patologias": "vomitos, tos, fiebre",
+            "fecha_creacion": "2020-3-22",
             "medico": 8,
             "hospital": 5
         }
@@ -114,6 +120,7 @@
             "estado": "F",
             "condicion": "S",
             "patologias": "fiebre",
+            "fecha_creacion": "2020-3-22",
             "fecha_defuncion": "2020-06-17T02:31:43.160Z",
             "medico": 9,
             "hospital": 6
@@ -132,6 +139,7 @@
             "estado": "E",
             "condicion": "S",
             "patologias": "fiebre, tos",
+            "fecha_creacion": "2020-3-22",
             "medico": 6,
             "hospital": 6
         }
@@ -149,7 +157,8 @@
             "estado": "F",
             "condicion": "S",
             "patologias": "fiebre",
-            "fecha_defuncion": "2020-06-20T02:31:43.160Z",
+            "fecha_defuncion": "2020-04-20T02:31:43.160Z",
+            "fecha_creacion": "2020-3-30",
             "medico": 9,
             "hospital": 6
         }
@@ -167,6 +176,7 @@
             "estado": "C",
             "condicion": "A",
             "patologias": "-",
+            "fecha_creacion": "2020-4-05",
             "medico": 9,
             "hospital": 6
         }
@@ -184,6 +194,7 @@
             "estado": "E",
             "condicion": "A",
             "patologias": "-",
+            "fecha_creacion": "2020-4-05",
             "medico": 9,
             "hospital": 6
         }
@@ -201,6 +212,7 @@
             "estado": "C",
             "condicion": "S",
             "patologias": "fiebre, Dolor de garganta",
+            "fecha_creacion": "2020-4-05",
             "medico": 9,
             "hospital": 6
         }
@@ -218,6 +230,7 @@
             "estado": "F",
             "condicion": "S",
             "patologias": "fiebre, tos, dificultades respiratorias",
+            "fecha_creacion": "2020-6-10",
             "fecha_defuncion": "2020-06-20T02:31:43.160Z",
             "medico": 9,
             "hospital": 6
@@ -236,6 +249,7 @@
             "estado": "C",
             "condicion": "S",
             "patologias": "fiebre",
+            "fecha_creacion": "2020-5-22",
             "medico": 9,
             "hospital": 6
         }
@@ -253,6 +267,7 @@
             "estado": "F",
             "condicion": "S",
             "patologias": "fiebre, dificultades respiratorias",
+            "fecha_creacion": "2020-5-22",
             "fecha_defuncion": "2020-06-19T02:31:43.160Z",
             "medico": 9,
             "hospital": 6
@@ -271,7 +286,134 @@
             "estado": "E",
             "condicion": "S",
             "patologias": "fiebre, tos, dolor de garganta",
+            "fecha_creacion": "2020-6-21",
             "medico": 2,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 17,
+        "fields": {
+            "nombre": "Saul",
+            "apellido": "Ramirez",
+            "dni": 33944532,
+            "localidad": "La Leonesa",
+            "fecha_nacimiento": "1954-6-2",
+            "genero":"M",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "fiebre, tos, dolor de garganta",
+            "fecha_creacion": "2020-6-21",
+            "medico": 2,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 18,
+        "fields": {
+            "nombre": "Gaston",
+            "apellido": "Torres",
+            "dni": 22934934,
+            "localidad": "La Leonesa",
+            "fecha_nacimiento": "1970-6-2",
+            "genero":"M",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "fiebre, tos, dolor de garganta",
+            "fecha_creacion": "2020-6-15",
+            "medico": 2,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 19,
+        "fields": {
+            "nombre": "Romina",
+            "apellido": "Masin",
+            "dni": 354434456,
+            "localidad": "Barranqueras",
+            "genero":"F",
+            "fecha_nacimiento": "1994-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-22",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 20,
+        "fields": {
+            "nombre": "Marcelo",
+            "apellido": "Fernandez",
+            "dni": 34544344,
+            "localidad": "Resistencia",
+            "genero":"M",
+            "fecha_nacimiento": "1994-6-12",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos, Fiebre",
+            "fecha_creacion": "2020-6-22",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 21,
+        "fields": {
+            "nombre": "Tatiana",
+            "apellido": "Gonzales",
+            "dni": 30923492,
+            "localidad": "Lapachito",
+            "genero":"F",
+            "fecha_nacimiento": "1990-6-24",
+            "estado": "E",
+            "condicion": "A",
+            "patologias": "-",
+            "fecha_creacion": "2020-6-22",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 22,
+        "fields": {
+            "nombre": "Gaston",
+            "apellido": "Bermudez",
+            "dni": 32034234,
+            "localidad": "Charata",
+            "genero":"M",
+            "fecha_nacimiento": "1987-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-22",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 23,
+        "fields": {
+            "nombre": "Raul",
+            "apellido": "Rodriguez",
+            "dni": 32034223,
+            "localidad": "Lapachito",
+            "genero":"M",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-22",
+            "medico": 3,
             "hospital": 1
         }
     }
