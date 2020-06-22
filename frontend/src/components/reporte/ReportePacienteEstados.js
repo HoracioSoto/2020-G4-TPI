@@ -7,27 +7,17 @@ export class ReportePacienteEstados extends Component {
     state={
         pacientes: [],
         datosEstado: {
-            labels: [
-                'Asintomáticos',
-                'Sintomáticos',
-                'Fallecidos'
-            ],
+            labels: [''],
             datasets: [{
-                data: [300, 50, 25],
-                backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-                ],
-                hoverBackgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56'
-                ]
+                data: [],
+                backgroundColor: [],
+                hoverBackgroundColor: []
             }]
         },
+        activos: '',
         asintomaticos: '',
         sintomaticos: '',
+        recuperados: '',
         fallecidos: ''
     }
 
@@ -45,34 +35,40 @@ export class ReportePacienteEstados extends Component {
         let pacientes = await this.state.pacientes
         // console.log('lista pacientes ready', pacientes)
 
-        const asintomaticos = pacientes.filter(paciente => paciente.estado != 'F' && paciente.condicion === 'A')
-        const sintomaticos = pacientes.filter(paciente => paciente.estado != 'F' && paciente.condicion === 'S')
-        const fallecido = pacientes.filter(paciente => paciente.estado === 'F')
+        const asintomaticos = pacientes.filter(paciente => paciente.estado != 'F' && paciente.estado != 'C' && paciente.condicion === 'A')
+        const sintomaticos = pacientes.filter(paciente => paciente.estado != 'F' && paciente.estado != 'C' && paciente.condicion === 'S')
+        const recuperados = pacientes.filter(paciente => paciente.estado === 'C')
+        const fallecidos = pacientes.filter(paciente => paciente.estado === 'F')
         
         this.setState({
             datosEstado: {
                 labels: [
                     'Asintomáticos',
                     'Sintomáticos',
+                    'Recuperados',
                     'Fallecidos'
                 ],
                 datasets: [{
-                    data: [asintomaticos.length, sintomaticos.length, fallecido.length],
+                    data: [asintomaticos.length, sintomaticos.length, recuperados.length ,fallecidos.length],
                     backgroundColor: [
-                    '#FF6384',
                     '#36A2EB',
-                    '#FFCE56'
+                    '#FFCE56',
+                    '#00d397',
+                    '#FF6384',
                     ],
                     hoverBackgroundColor: [
-                    '#FF6384',
                     '#36A2EB',
-                    '#FFCE56'
+                    '#FFCE56',
+                    '#00d397',
+                    '#FF6384',
                     ]
                 }]
             },
+            activos: 'Pacientes Activos ' +(this.getPorcentaje(pacientes.length,(asintomaticos.length+sintomaticos.length)))+'%',
             asintomaticos:'Asintomáticos '+(this.getPorcentaje(pacientes.length,asintomaticos.length))+'%',
             sintomaticos:'Sintomáticos '+(this.getPorcentaje(pacientes.length,sintomaticos.length))+'%',
-            fallecidos:'Fallecidos '+(this.getPorcentaje(pacientes.length,fallecido.length))+'%'
+            recuperados:'Recuperados '+(this.getPorcentaje(pacientes.length,recuperados.length))+'%',
+            fallecidos:'Fallecidos '+(this.getPorcentaje(pacientes.length,fallecidos.length))+'%'
         })
     }
 
@@ -88,12 +84,24 @@ export class ReportePacienteEstados extends Component {
                 <ul className="nav flex-column">
                     <li className="nav-item">
                         <span className="font-OpenSans font-size-reporte">
-                            {this.state.asintomaticos}
+                            {this.state.activos}
                         </span>
                     </li>
+                    <ul>
+                        <li className="nav-item">
+                            <span className="font-OpenSans font-size-reporte">
+                                {this.state.asintomaticos}
+                            </span>
+                        </li>
+                        <li className="nav-item">
+                            <span className="font-OpenSans font-size-reporte">
+                                {this.state.sintomaticos}
+                            </span>
+                        </li>
+                    </ul>
                     <li className="nav-item">
                         <span className="font-OpenSans font-size-reporte">
-                            {this.state.sintomaticos}
+                            {this.state.recuperados}
                         </span>
                     </li>
                     <li className="nav-item">

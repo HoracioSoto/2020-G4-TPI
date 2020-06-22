@@ -14,7 +14,7 @@ export class ReporteDptos extends Component {
               {
                 label: '',
                 backgroundColor: '',
-                borderColor: 'r',
+                borderColor: '',
                 borderWidth: 1,
                 hoverBackgroundColor: '',
                 hoverBorderColor: '',
