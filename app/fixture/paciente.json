@@ -66,7 +66,7 @@
             "estado": "EE",
             "condicion": "A",
             "patologias": "tos",
-            "fecha_creacion": "2020-3-19",
+            "fecha_creacion": "2020-4-04",
             "medico": 3,
             "hospital": 1
         }
@@ -84,7 +84,7 @@
             "estado": "A",
             "condicion": "A",
             "patologias": "-",
-            "fecha_creacion": "2020-3-22",
+            "fecha_creacion": "2020-4-04",
             "medico": 4,
             "hospital": 2
         }
@@ -102,7 +102,7 @@
             "estado": "C",
             "condicion": "S",
             "patologias": "vomitos, tos, fiebre",
-            "fecha_creacion": "2020-3-22",
+            "fecha_creacion": "2020-4-10",
             "medico": 8,
             "hospital": 5
         }
@@ -120,7 +120,7 @@
             "estado": "F",
             "condicion": "S",
             "patologias": "fiebre",
-            "fecha_creacion": "2020-3-22",
+            "fecha_creacion": "2020-4-11",
             "fecha_defuncion": "2020-06-17T02:31:43.160Z",
             "medico": 9,
             "hospital": 6
@@ -139,7 +139,7 @@
             "estado": "E",
             "condicion": "S",
             "patologias": "fiebre, tos",
-            "fecha_creacion": "2020-3-22",
+            "fecha_creacion": "2020-4-19",
             "medico": 6,
             "hospital": 6
         }
@@ -158,7 +158,7 @@
             "condicion": "S",
             "patologias": "fiebre",
             "fecha_defuncion": "2020-04-20T02:31:43.160Z",
-            "fecha_creacion": "2020-3-30",
+            "fecha_creacion": "2020-5-05",
             "medico": 9,
             "hospital": 6
         }
@@ -176,7 +176,7 @@
             "estado": "C",
             "condicion": "A",
             "patologias": "-",
-            "fecha_creacion": "2020-4-05",
+            "fecha_creacion": "2020-5-05",
             "medico": 9,
             "hospital": 6
         }
@@ -194,7 +194,7 @@
             "estado": "E",
             "condicion": "A",
             "patologias": "-",
-            "fecha_creacion": "2020-4-05",
+            "fecha_creacion": "2020-5-05",
             "medico": 9,
             "hospital": 6
         }
@@ -212,7 +212,7 @@
             "estado": "C",
             "condicion": "S",
             "patologias": "fiebre, Dolor de garganta",
-            "fecha_creacion": "2020-4-05",
+            "fecha_creacion": "2020-5-05",
             "medico": 9,
             "hospital": 6
         }
@@ -230,7 +230,7 @@
             "estado": "F",
             "condicion": "S",
             "patologias": "fiebre, tos, dificultades respiratorias",
-            "fecha_creacion": "2020-6-10",
+            "fecha_creacion": "2020-5-10",
             "fecha_defuncion": "2020-06-20T02:31:43.160Z",
             "medico": 9,
             "hospital": 6
@@ -413,6 +413,127 @@
             "condicion": "S",
             "patologias": "tos",
             "fecha_creacion": "2020-6-22",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 24,
+        "fields": {
+            "nombre": "Mario",
+            "apellido": "Rodriguez",
+            "dni": 320334323,
+            "localidad": "Lapachito",
+            "genero":"M",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-23",
+            "medico": 3,
+            "hospital": 1
+        }
+    },
+    {
+        "model": "app.paciente",
+        "pk": 24,
+        "fields": {
+            "nombre": "Raul",
+            "apellido": "Rodriguez",
+            "dni": 31034223,
+            "localidad": "Lapachito",
+            "genero":"M",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-23",
+            "medico": 3,
+            "hospital": 1
+        }
+    },{
+        "model": "app.paciente",
+        "pk": 24,
+        "fields": {
+            "nombre": "Raul",
+            "apellido": "Rodriguez",
+            "dni": 32454223,
+            "localidad": "Resistencia",
+            "genero":"M",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-23",
+            "medico": 3,
+            "hospital": 1
+        }
+    },{
+        "model": "app.paciente",
+        "pk": 25,
+        "fields": {
+            "nombre": "Federico",
+            "apellido": "Figueredo",
+            "dni": 32039323,
+            "localidad": "Lapachito",
+            "genero":"M",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-23",
+            "medico": 3,
+            "hospital": 1
+        }
+    },{
+        "model": "app.paciente",
+        "pk": 26,
+        "fields": {
+            "nombre": "Rosita",
+            "apellido": "Mendez",
+            "dni": 31234223,
+            "localidad": "Resistencia",
+            "genero":"F",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "A",
+            "patologias": "-",
+            "fecha_creacion": "2020-6-23",
+            "medico": 3,
+            "hospital": 1
+        }
+    },{
+        "model": "app.paciente",
+        "pk": 27,
+        "fields": {
+            "nombre": "Luis",
+            "apellido": "Gutti",
+            "dni": 32099823,
+            "localidad": "Resistencia",
+            "genero":"M",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "S",
+            "patologias": "tos",
+            "fecha_creacion": "2020-6-23",
+            "medico": 3,
+            "hospital": 1
+        }
+    },{
+        "model": "app.paciente",
+        "pk": 28,
+        "fields": {
+            "nombre": "Laura",
+            "apellido": "Quintana",
+            "dni": 32035423,
+            "localidad": "Fontana",
+            "genero":"F",
+            "fecha_nacimiento": "1973-6-24",
+            "estado": "E",
+            "condicion": "A",
+            "patologias": "-",
+            "fecha_creacion": "2020-6-23",
             "medico": 3,
             "hospital": 1
         }
