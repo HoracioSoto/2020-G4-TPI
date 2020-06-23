@@ -73,7 +73,7 @@ export class ReportePacienteEstados extends Component {
     }
 
     getPorcentaje = (total,valor) =>{
-        return (valor*100)/total
+        return Math.trunc(((valor*100)/total)*100)/100
     }
 
     render() {
