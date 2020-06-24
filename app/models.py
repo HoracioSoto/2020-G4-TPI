@@ -50,6 +50,8 @@ class Persona(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     dni = models.IntegerField(unique=True, help_text='Solo números')
+    direccion = models.CharField(max_length=200, null=True, blank=True, help_text='Direccion donde reside del Paciente')
+    localidad = models.CharField(max_length=200, null=True, blank=True, default='Resistencia', help_text='Localidad donde reside del Paciente')
     genero = models.CharField(
         max_length=1,
         choices=utils.generos,
@@ -90,11 +92,20 @@ class Paciente(Persona):
         default='A',
         help_text='Sintomático o asintomático',
     )
-    patologias = models.TextField(blank=True, null=True)
+    patologias = models.TextField(
+        blank=True, 
+        null=True)
     fecha_creacion = models.DateTimeField(
-        blank=True, null=True, auto_now_add=True)
-    fecha_alta = models.DateTimeField(blank=True, null=True)
-    fecha_defuncion = models.DateTimeField(blank=True, null=True)
+        blank=True, 
+        null=True, 
+        auto_now_add=True, 
+        help_text='Fecha de confirmación del caso como COVID-19 positivo')
+    fecha_alta = models.DateTimeField(
+        blank=True, 
+        null=True)
+    fecha_defuncion = models.DateTimeField(
+        blank=True, 
+        null=True)
     medico = models.ForeignKey(
         to=Medico,
         related_name='pacientes',
